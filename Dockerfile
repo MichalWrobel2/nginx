@@ -1,6 +1,6 @@
-ENV VITE_HOST ${VITE_HOST}
 # First stage: Build node app
 FROM node:16 AS build-client
+ENV VITE_HOST ${VITE_HOST}
 WORKDIR /app/client
 COPY client/package*.json ./
 RUN npm install
