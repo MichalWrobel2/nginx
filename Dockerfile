@@ -1,3 +1,4 @@
+ARG VITE_HOST
 # First stage: Build node app
 FROM node:16 AS build-client
 WORKDIR /app/client
