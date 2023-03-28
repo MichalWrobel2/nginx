@@ -1,0 +1,37 @@
+@use "./variables" as *
+  
+@mixin for-size($size) 
+  @if $size == phone
+    @media (max-width: 600px)
+      @content
+  @else if $size == tablet
+    @media (max-width: 900px)
+      @content
+  @else if $size == desktop
+    @media (max-width: 1200px)
+      @content
+  @else if $size == big-desktop
+    @media (max-width: 1800px)
+      @content
+
+@mixin section
+  overflow-x: hidden
+  min-height: 100vh
+  padding: $bigScreenSectionPadding
+  @include for-size(desktop)
+    padding: $sectionPadding
+  @include for-size(tablet)
+    padding: $mobileSectionPadding
+    min-height: unset
+  
+
+@mixin decoratorAnimation
+  @keyframes pulse 
+    0%
+      transform: scale(1)
+    50%
+      transform: scale(1.15)
+    100%
+      transform: scale(1)
+  animation: pulse 7s linear infinite
+

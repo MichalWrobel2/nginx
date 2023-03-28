@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Khand';
+}
+
+input:focus-visible,
+textarea:focus-visible {
+	outline-color: #ffcb77;
+}
+
+body {
+	margin: unset;
+	background-color: #fff;
+}
+
+body > div {
+	overflow: hidden;
+	height: 100%;
+}
+
+.app {
+	height: 100%;
+	overflow: auto;
+}
+
+.gallery__wrapper {
+	/* override 3rd party gallery styles */
+	padding: 0 !important;
+}
