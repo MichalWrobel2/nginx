@@ -1,4 +1,5 @@
-ARG VITE_HOST
+ARG host
+ENV VITE_HOST $host
 # First stage: Build node app
 FROM node:16 AS build-client
 WORKDIR /app/client
