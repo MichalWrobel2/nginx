@@ -5,6 +5,7 @@ import type { PageEntity } from '~/models/types';
 import type { LocaleMeta } from '~/types/locale';
 
 export const prerender = true;
+export const csr = true;
 
 const getLocale = (pathname: string, locales: LocaleMeta[], defaultLocale: LocaleMeta) => {
 	const pathnameParts = pathname.split('/');
