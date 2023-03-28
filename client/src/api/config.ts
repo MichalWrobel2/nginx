@@ -1,2 +1,2 @@
-export const HOST = import.meta.env.VITE_HOST;
+export const HOST = 'https://strapi-production-da80.up.railway.app'
  
